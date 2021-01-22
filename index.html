@@ -10,33 +10,35 @@
 
 <body>
     <div class="container">
-        <img id="image" name="image"
-            src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80">
-        <label for="imgage">Ping Pong Score Keeper</label>
+            <img id="image" name="image"
+                src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80">
+            
+                <label for="imgage" class="labels">Ping Pong Score Keeper</label>
+
+            <section>
+                <h1><span id="scoreCount1"> 0 </span> to <span id="scoreCount2">0 </span></h1>
+                <label for="scoreCount"></label>
+
+           
+            <section id="scoreOptions">
+                <label for="scores">Playing to:</label>
+                <select name="scores" id="scoreOption">
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            
+
+            <section>
+                <button id="btn1">+1Player</button>
+                <button id="btn2">+2Player</button>
+                <button id="btn3">Reset</button>
+            </section>
+        
     </div>
-    <section>
-        <h1 id="scoreCount"><span>0</span>to <span>0</span> </h1>
-        <label for="scoreCount"></label>
-
-    </section>
-    <label for="scores">Playing to:</label>
-    <select name="scores" id="scores">
-        <option value="" selected> --Choose an option--</option>
-        <option value="five">5</option>
-        <option value="six">6</option>
-        <option value="seven">7</option>
-        <option value="eight">8</option>
-        <option value="nine">9</option>
-        <option value="ten">10</option>
-    </select>
-
-    <section>
-        <button>+1Player</button>
-        <button>+2Player</button>
-        <button>Reset</button>
-    </section>
-
-
     <script src="app.js"></script>
 </body>
 
