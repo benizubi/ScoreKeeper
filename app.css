@@ -37,7 +37,13 @@
     
 
 }
-#scoreOptions{
+.winner{
+    color: greenyellow;
+}
+.loser{
+    color: red;
+}
+#scoreOption{
     padding-top: 5px;
     padding-bottom: 10px;
     position:relative;

@@ -1,9 +1,9 @@
 const btn1 = document.querySelector('#btn1');
 const btn2 = document.querySelector('#btn2');
 const btn3 = document.querySelector('#btn3');
-const scoreCount1 = document.querySelectorAll('span')[0];
-const scoreCount2 = document.querySelectorAll('span')[1];
-const scoreOption = document.querySelector('#scoreOption');
+const scoreCounting1 = document.querySelectorAll('span')[0];
+const scoreCounting2 = document.querySelectorAll('span')[1];
+const scoreOptioning1 = document.querySelectorAll('#scoreOption')[0];
 
 let p1score = 0;
 let p2score = 0;
@@ -16,28 +16,33 @@ btn1.addEventListener('click', () => {
         p1score += 1;
         if (p1score === winningScore) {
             isGameOver = true;
+            scoreCounting1.classList.add('winner');
+            scoreCounting2.classList.add('loser');
         }
-        scoreCount1.textContent = p1score;
+        scoreCounting1.textContent = p1score;
         // text content and innerText does the same thing
     }
-});
+})
 
-btn2.addEventListener('click', () => {
+btn2.addEventListener('click', function () {
 
     if (!isGameOver) {
         p2score += 1;
         if (p2score === winningScore) {
             isGameOver = true;
+            scoreCounting2.classList.add('winner');
+            scoreCounting1.classList.add('loser');
         }
-        scoreCount2.textContent = p2score;
+        scoreCounting2.textContent = p2score;
     }
 })
 
-scoreOption.addEventListener('change', () => {
+scoreOptioning1.addEventListener('change', function () {
+
     winningScore = parseInt(this.value);
     // parseInt here is turning the options values from strings to int
     startAgain();
-});
+})
 
 
 btn3.addEventListener('click', startAgain)
@@ -48,6 +53,9 @@ function startAgain() {
     isGameOver = false;
     p1score = 0;
     p2score = 0;
-    scoreCount1.textContent = 0;
-    scoreCount2.textContent = 0;
+    scoreCounting1.textContent = 0;
+    scoreCounting2.textContent = 0;
+    scoreCounting2.classList.remove('winner', 'loser');
+    scoreCounting1.classList.remove('loser', 'winner');
+
 }
