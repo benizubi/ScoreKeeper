@@ -16,8 +16,12 @@ btn1.addEventListener('click', () => {
         p1score += 1;
         if (p1score === winningScore) {
             isGameOver = true;
-            scoreCounting1.classList.add('winner');
-            scoreCounting2.classList.add('loser');
+            scoreCounting1.classList.add('has-text-success');
+            scoreCounting2.classList.add('has-text-danger');
+            btn1.disabled = true;
+            btn2.disabled = true;
+
+        // dissables the button when game is over
         }
         scoreCounting1.textContent = p1score;
         // text content and innerText does the same thing
@@ -30,8 +34,11 @@ btn2.addEventListener('click', function () {
         p2score += 1;
         if (p2score === winningScore) {
             isGameOver = true;
-            scoreCounting2.classList.add('winner');
-            scoreCounting1.classList.add('loser');
+            scoreCounting2.classList.add('has-text-success');
+            scoreCounting1.classList.add('has-text-danger');
+            btn1.disabled = true;
+            btn2.disabled = true;
+        
         }
         scoreCounting2.textContent = p2score;
     }
@@ -55,7 +62,12 @@ function startAgain() {
     p2score = 0;
     scoreCounting1.textContent = 0;
     scoreCounting2.textContent = 0;
-    scoreCounting2.classList.remove('winner', 'loser');
-    scoreCounting1.classList.remove('loser', 'winner');
+    scoreCounting2.classList.remove('has-text-success', 'has-text-danger');
+    scoreCounting1.classList.remove('has-text-danger', 'has-text-success');
+    btn1.disabled = false;
+    btn2.disabled = false;
+
+    // undissabled the buttons to false so players can play
+
 
 }

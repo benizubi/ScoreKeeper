@@ -7,51 +7,55 @@
     <title>Score Keeper</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="columns">
-            <div class="column is-half is-offset-one-quarter">
-                <header class="card-header">
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img id="image" name="image"
+                                    src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Ping Pong Score Keeper:
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class="title is-1"><span id="scoreCount1"> 0 </span> to <span id="scoreCount2">0
+                                    </span>
+                                </h1>
+                                <p class="subtitle">Use the buttons below to keep score.</p>
+                                <label for="scoreOption" class="label is-large is-inline"></label>
+                                <div class="select is-rounded">
+                                    <select name="" id="scoreOption">
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button class="is-primary button card-footer-item is-large" id="btn1">+1Player</button>
+                            <button class="is-info button card-footer-item is-large" id="btn2">+2Player</button>
+                            <button class="is-danger button card-footer-item is-large" id="btn3">Reset</button>
 
-                    <p class="card-header-title">
-                        Ping Pong Score Keeper:
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <h1 class="title is-1"><span id="scoreCount1"> 0 </span> to <span id="scoreCount2">0 </span>
-                        </h1>
-                        <p class="subtitle">Use the buttons below to keep score.</p>
+                        </footer>
                     </div>
                 </div>
-                <footer class="card-footer">
-
-                    <button class="is-primary button card-footer-item" id="btn1">+1Player</button>
-                    <button class="is-primary button card-footer-item" id="btn2">+2Player</button>
-                    <button class="is-primary button card-footer-item" id="btn3">Reset</button>
-                </footer>
-                <img id="image" name="image"
-                    src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80">
-
-                <label for="imgage" class="labels">Ping Pong Score Keeper</label>
-
-
-                <select name="" id="scoreOption">
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <section>
-                </section>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <script src="app.js"></script>
